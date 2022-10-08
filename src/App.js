@@ -33,7 +33,7 @@ function App() {
             <ul className="navbar-nav me-auto mt-2 mt-lg-0">
               <li className="nav-item">
                 <NavLink
-                  className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link active"}
+                  className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link active"}
                   to="/home"
                   aria-current="page"
                 >
@@ -41,27 +41,93 @@ function App() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/handleEvent">
+                  handleEvent
+                </NavLink>
+              </li>
+
+
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  State
+                </a>
+                <div className="dropdown-menu" aria-labelledby="dropdownId">
+                  <NavLink className="dropdown-item" to="/DemoState">
+                    DemoState
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/BaiTapState">
+                  BaiTapState
+                  </NavLink>
+                </div>
+              </li>
+
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  RenderWithMap
+                </a>
+                <div className="dropdown-menu" aria-labelledby="dropdownId">
+                  <NavLink className="dropdown-item" to="/BaiTapRenderMap">
+                  BaiTapRenderMap
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/RenderWithMap">
+                  RenderWithMap
+                  </NavLink>
+                </div>
+              </li>
+
+
+
+
+
+
+
+
+
+
+
+              <li className="nav-item">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/StyleRender">
+                  StyleRender
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login">
                   Login
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login" to="/register">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/register">
                   Register
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login" to="/contact">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/contact">
                   Contact
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login" to="/about">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/about">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className={({isActive}) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/login" to="/reactLifeCycle">
+                <NavLink className={({ isActive }) => isActive ? 'bg-white text-dark nav-link rounded-1' : "nav-link"} to="/reactLifeCycle">
                   LifeCyCle
                 </NavLink>
               </li>
@@ -78,8 +144,8 @@ function App() {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
                   <NavLink className="dropdown-item" to="/reactForm">
-                  ProductManagement(values_validation)
-                  </NavLink>       
+                    ProductManagement(values_validation)
+                  </NavLink>
                 </div>
               </li>
               <li className="nav-item dropdown">
@@ -95,21 +161,21 @@ function App() {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
                   <NavLink className="dropdown-item" to="/demoRedux">
-                  Demo tăng giảm số lượng
+                    Demo tăng giảm số lượng
                   </NavLink>
                   <NavLink className="dropdown-item" to="/demoChangeColor">
-                  DemoChangeColor
+                    DemoChangeColor
                   </NavLink>
                   <NavLink className="dropdown-item" to="/demoqlsv">
-                  Demo Quản Lý Sinh Viên
+                    Demo Quản Lý Sinh Viên
                   </NavLink>
                   <NavLink className="dropdown-item" to="/demoGioHang">
-                  Demo Gio Hang
+                    Demo Gio Hang
                   </NavLink>
                   <NavLink className="dropdown-item" to="/demoBurger">
-                  Demo Burger
+                    Demo Burger
                   </NavLink>
-                  
+
                 </div>
               </li>
             </ul>
@@ -130,7 +196,7 @@ function App() {
         </nav>
       </div>
 
-      <section style={{minHeight: 450}}>
+      <section style={{ minHeight: 450 }}>
         <Outlet />
       </section>
       <footer className="bg-dark text-white text-center p-5">Footer</footer>

@@ -42,7 +42,7 @@ export default class RenderWithMap extends Component {
   //     return jsxArr
   //   };
 
-  // Cach2: for of trả về các thuộc tính có trong mảng cần render
+  // Cach2: for in trả về các thuộc tính có trong mảng cần render
   //   renderProduct = () => {
   //     let jsxArr = [];
   //     for (let index in data) {
