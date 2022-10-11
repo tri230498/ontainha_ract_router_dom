@@ -55,34 +55,36 @@ export default class BaiTapXemChiTiet extends Component {
       hinhAnh: "./img/applephone.jpg",
     },
   };
-
+  
   renderProduct = () => {
     return data.map((dienThoai, index) => {
       return (
         <div className="col-4" key={index}>
-          <SanPham dienThoai = {dienThoai} xemChiTiet = {this.xemChiTiet}/>
+          <SanPham dienThoai={dienThoai} xemChiTiet={this.xemChiTiet} />
         </div>
       );
     });
   };
-
+  
   xemChiTiet = (sanPhamClick) => {
-    // console.log(sanPhamClick);
-    // set lại giá trị state.sanPhamChiTiet = sản phẩm người dùng click vào 
+    console.log(sanPhamClick);
+    // set lại giá trị state.sanPhamChiTiet = sản phẩm người dùng click vào
     this.setState({
-        sanPhamChiTiet : sanPhamClick
-    })
-  }
-
-
-
-  render() {
-
+      sanPhamChiTiet: sanPhamClick,
+    });
     
-    let { tenSP,manHinh, heDieuHanh, cameraTruoc, cameraSau, ram, rom, hinhAnh } =
-      this.state.sanPhamChiTiet;
-
-
+  };
+  render() {
+    let {
+      tenSP,
+      manHinh,
+      heDieuHanh,
+      cameraTruoc,
+      cameraSau,
+      ram,
+      rom,
+      hinhAnh,
+    } = this.state.sanPhamChiTiet;
 
     return (
       <div className="container">

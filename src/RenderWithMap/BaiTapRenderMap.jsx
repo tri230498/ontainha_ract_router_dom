@@ -159,7 +159,33 @@ const data = [
     danhGia: 5,
   },
 ];
+
 export default class BaiTapRenderMap extends Component {
+  renderMap = () => {
+    return data.map((prod, index) => {
+      return (
+        <div className="col-3 mt-2 py-3" key={index}>
+          <div className="card">
+            <img
+              src={prod.hinhAnh}
+              height={350}
+              style={{ objectFit: "cover" }}
+              alt="..."
+            />
+            <div className="card-body bg-dark text-white">
+              <h2 style={{ height: 75, fontSize: 28 }}>{prod.tenPhim}</h2>
+              <p style={{ height: 100 }}>
+                {prod.moTa.length > 100
+                  ? prod.moTa.substring(0, 100) + `...`
+                  : prod.moTa}
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    });
+  };
+
   render() {
     return (
       <div className="content">
@@ -228,8 +254,11 @@ export default class BaiTapRenderMap extends Component {
               </form>
             </div>
           </nav>
-          <div className="container-fluid">
+          <div className="container">
             <div className="row">
+
+              {/* Cách 1: Dàn Layout cứng */}
+
               {/* <div className="col-2">
                 <div className="card">
                   <img src="https://i.pravatar.cc/150?img=1" alt="..." />
@@ -240,19 +269,25 @@ export default class BaiTapRenderMap extends Component {
                 </div>
               </div> */}
 
-              {data.map((prod, index) => {
+              {/* Cach 2: Sử dụng map() render các thẻ trong mảng  */}
+
+              {/* {data.map((prod, index) => {
                 return (
-                  <div className="col-3 mb-4" key={index}>
+                  <div className="col-3 mb-2 mt-4" key={index}>
                     <div className="card">
                       <img src={prod.hinhAnh}  height={350} style={{objectFit: "cover" }} alt="..." />
                       <div className="card-body bg-dark text-white">
-                        <h2 style={{height: 75, fontSize: 30}}>{prod.tenPhim}</h2>
+                        <h2 style={{height: 75, fontSize: 28}}>{prod.tenPhim}</h2>
                         <p style={{height:100}}>{prod.moTa.length > 100 ? prod.moTa.substring(0,100) + `...` : prod.moTa}</p>
                       </div>
                     </div>
                   </div>
                 );
-              })}
+              })} */}
+
+              {/* Cách 3: Hàm Logic render các thử đửa ra bên ngoài s đó binding vào sử dụng */}
+              
+              {this.renderMap()}
             </div>
           </div>
         </div>

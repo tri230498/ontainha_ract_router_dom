@@ -32,7 +32,7 @@ export default class ProductManagement extends Component {
       desc: "",
     },
   };
-  // === Hàm chỉnh sửa info table === //
+
   editProduct = (prodEdit) => {
     
     // setState this.state.productEdit
@@ -41,7 +41,6 @@ export default class ProductManagement extends Component {
     })
   };
 
-  // === Update === //
   updateProduct = (productUpdate) => {
     // Lấy ra dữ liệu trong mảng (prodUpdate)
    let prodUpdate = this.state.arrProduct.find(prod => prod.id == productUpdate.id);
@@ -58,8 +57,6 @@ export default class ProductManagement extends Component {
     console.log(productUpdate);
   }
  
-
-
   //CRUD
   // Muốn thay đổi state nào thì viết hàm setState tại vị trí chứa state đó (lưu ý)
 
@@ -97,9 +94,8 @@ export default class ProductManagement extends Component {
   };
 
 
-
-
   render() {
+
     return (
       <div className="container">
         <h3 className="text-center">ProductManagement</h3>

@@ -27,6 +27,10 @@ import StyleRender from './StyleRender/StyleRender';
 import BaiTapState from './State/BaiTapState';
 import BaiTapRenderMap from './RenderWithMap/BaiTapRenderMap';
 import RenderWithMap from './RenderWithMap/RenderWithMap';
+import ProductList from './Props/BaiTapProps/ProductList';
+import BaiTapXemChiTiet from './Props/BaiTapXemChiTiet/BaiTapXemChiTiet';
+import ExerciseCarStore from './Props/ExerciseCarStore/ExerciseCarStore';
+
 
 
 
@@ -57,6 +61,10 @@ root.render(
                     <Route path='BaiTapState' element={<BaiTapState />}></Route>
                     <Route path='BaiTapRenderMap' element={<BaiTapRenderMap />}></Route>
                     <Route path='RenderWithMap' element={<RenderWithMap />}></Route>
+                    <Route path='ProductList' element={<ProductList />}></Route>
+                    <Route path='BaiTapXemChiTiet' element={<BaiTapXemChiTiet />}></Route>
+                    <Route path='ExerciseCarStore' element={<ExerciseCarStore />}></Route>
+                    
                     {/* <Route path='*' element={<Page404/>}></Route> */}
                     <Route path='*' element={<Navigate to="/home" />}></Route>
 

@@ -10,7 +10,7 @@ export default class FormProduct extends Component {
       img: "",
       productType: "mobile",
       desc: "",
-    },
+    },  
     errors: {
       id: "",
       name: "",

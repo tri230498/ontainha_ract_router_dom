@@ -64,7 +64,7 @@ function App() {
                     DemoState
                   </NavLink>
                   <NavLink className="dropdown-item" to="/BaiTapState">
-                  BaiTapState
+                    BaiTapState
                   </NavLink>
                 </div>
               </li>
@@ -83,10 +83,38 @@ function App() {
                 </a>
                 <div className="dropdown-menu" aria-labelledby="dropdownId">
                   <NavLink className="dropdown-item" to="/BaiTapRenderMap">
-                  BaiTapRenderMap
+                    BaiTapRenderMap
                   </NavLink>
                   <NavLink className="dropdown-item" to="/RenderWithMap">
-                  RenderWithMap
+                    RenderWithMap
+                  </NavLink>
+                </div>
+              </li>
+
+
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdownId"
+                  data-bs-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Props
+                </a>
+                <div className="dropdown-menu" aria-labelledby="dropdownId">
+                  <NavLink className="dropdown-item" to="/ProductList">
+                    ProductList
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/RenderWithMap">
+                    RenderWithMap
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/BaiTapXemChiTiet">
+                    BaiTapXemChiTiet
+                  </NavLink>
+                  <NavLink className="dropdown-item" to="/ExerciseCarStore">
+                    ExerciseCarStore
                   </NavLink>
                 </div>
               </li>
